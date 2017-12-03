@@ -36,6 +36,8 @@ public class MainFragment extends Fragment {
                 FragmentManager fragmentManager= getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction= fragmentManager.beginTransaction();
 
+                fragmentTransaction.setCustomAnimations(R.anim.enter, R.anim.exit, R.anim.pop_enter, R.anim.pop_exit);
+
                 Bundle bundle = new Bundle();
                 bundle.putString("input", editText.getText().toString());
                 nextFragment.setArguments(bundle);
