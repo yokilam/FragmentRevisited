@@ -30,10 +30,11 @@ public class NextFragment extends Fragment {
         if (bundle != null) {
             String userInput = bundle.getString("input");
             if (userInput!= null  && !userInput.isEmpty()) {
-                show.setText(userInput);
+                CheckingInput checkingInput= new CheckingInput(getResources(), userInput);
+                String newInput= checkingInput.changingText(userInput);
+                show.setText(newInput);
             }
         }
-        
         return rootView;
     }
 
